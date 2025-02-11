@@ -16,13 +16,13 @@ const geistMono = Geist_Mono({
 const jersey = Jersey_15({
 	variable: "--font-jersey",
 	subsets: ["latin"],
-	weight: "400",
+	weight: "400", // add additional weights as needed
 });
 
 const poppins = Poppins({
 	variable: "--font-poppins",
 	subsets: ["latin"],
-	weight: "600",
+	weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });
 
 export const metadata: Metadata = {

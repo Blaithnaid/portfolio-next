@@ -62,13 +62,13 @@ export default function Nav() {
 		<div className="flex flex-col justify-between min-w-80 bg-gunmetal md:h-screen">
 			<div className="cursor-default font-jersey p-3 text-4xl text-center">
 				<div className="mb-0.5">
-					<Link
+					<a
 						className="text-coral cursor-pointer"
 						href="/home"
 						title="return to home"
 					>
-						<b>iarla sparrow burke</b>
-					</Link>
+						iarla sparrow burke
+					</a>
 				</div>
 				<div className="bg-paynesgray h-0.5 w-full rounded-2xl"></div>
 				<div className="text-silver font-poppins text-sm mt-0.5">
@@ -100,9 +100,11 @@ export default function Nav() {
 					))}
 				</div>
 			</div>
-			<div className="h-0 md:h-12 text-silver cursor-default text-center">
+			<div className="h-0 md:h-12 text-silver text-md cursor-default text-center">
 				site by me ~{" "}
-				<a className="cursor-pointer underline">view on github</a>
+				<a className="text-neonpurple hover:text-indigo-600 cursor-pointer underline">
+					view on github
+				</a>
 			</div>
 		</div>
 	);
