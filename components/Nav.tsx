@@ -18,7 +18,7 @@ import {
 const navigation = [
 	{
 		name: "home",
-		href: "/home",
+		href: "/",
 		solidIcon: HomeSolid,
 		outlineIcon: HomeOutline,
 	},
@@ -103,7 +103,7 @@ export default function Nav() {
 			<div className="h-0 md:h-12 text-silver text-md cursor-default text-center">
 				site by me ~{" "}
 				<a className="text-neonpurple hover:text-indigo-600 cursor-pointer underline">
-					view on github
+					view on github {"<"}- FIX
 				</a>
 			</div>
 		</div>
