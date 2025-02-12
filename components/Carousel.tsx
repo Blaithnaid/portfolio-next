@@ -2,8 +2,9 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import { XMarkIcon } from "@heroicons/react/24/solid"; // or any icon library you prefer
+import Head from "next/head";
 import {
+	XMarkIcon,
 	ChevronLeftIcon,
 	ChevronRightIcon,
 	MagnifyingGlassPlusIcon,
@@ -15,12 +16,12 @@ type CarouselItem = {
 	alt?: string;
 };
 
-interface MyCarouselProps {
+interface CarouselProps {
 	items: CarouselItem[];
 	initialIndex?: number;
 }
 
-export default function Carousel({ items, initialIndex = 0 }: MyCarouselProps) {
+export default function Carousel({ items, initialIndex = 0 }: CarouselProps) {
 	const [currentIndex, setCurrentIndex] = useState(initialIndex);
 	const [lightboxOpen, setLightboxOpen] = useState(false);
 
@@ -38,13 +39,6 @@ export default function Carousel({ items, initialIndex = 0 }: MyCarouselProps) {
 		<>
 			{/* Carousel container */}
 			<div className="relative w-full h-full flex items-center justify-center bg-black">
-				{/* Left arrow */}
-				<ChevronLeftIcon
-					className="absolute left-2 z-10 size-8 bg-black/30 rounded-full hover:bg-black/50 hover:cursor-pointer"
-					onClick={prevSlide}
-					aria-label="Previous Slide"
-				/>
-
 				{/* Main item */}
 				<div className="relative w-full h-full flex items-center justify-center">
 					{currentItem.type === "image" ? (
@@ -66,21 +60,25 @@ export default function Carousel({ items, initialIndex = 0 }: MyCarouselProps) {
 					)}
 				</div>
 
-				{/* Right arrow */}
-				<ChevronRightIcon
-					className="absolute right-2 z-10 size-8 bg-black/30 rounded-xl hover:bg-black/50 hover:cursor-pointer"
-					onClick={nextSlide}
-					aria-label="Next Slide"
-				/>
-
-				{/* Icon to open lightbox */}
-				<button
-					className="absolute bottom-2 right-2 z-10 p-1 bg-black/50 text-white rounded hover:bg-black/70"
-					onClick={() => setLightboxOpen(true)}
-					aria-label="Open Lightbox"
-				>
-					<MagnifyingGlassPlusIcon className="h-5 w-5" />
-				</button>
+				<div className="absolute bottom-0 right-0 flex flex-row bg-black/50">
+					<ChevronLeftIcon
+						className="z-10 size-8 hover:bg-black/50 hover:cursor-pointer"
+						onClick={prevSlide}
+						aria-label="Previous Slide"
+					/>
+					<ChevronRightIcon
+						className="z-10 size-8 hover:bg-black/50 hover:cursor-pointer"
+						onClick={nextSlide}
+						aria-label="Next Slide"
+					/>
+					<button
+						className="z-10 p-1 hover:bg-black/50 text-white hover:cursor-pointer"
+						onClick={() => setLightboxOpen(true)}
+						aria-label="Open Lightbox"
+					>
+						<MagnifyingGlassPlusIcon className="h-6 w-6" />
+					</button>
+				</div>
 			</div>
 
 			{/* Lightbox Overlay */}
