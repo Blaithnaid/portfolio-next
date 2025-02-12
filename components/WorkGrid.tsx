@@ -1,9 +1,7 @@
 "use client";
 import { useState } from "react";
 import Image from "next/image";
-import Inline from "yet-another-react-lightbox/plugins/inline";
-import Lightbox from "yet-another-react-lightbox";
-import { NextJsImage } from "./WorkLightbox";
+import Carousel from "./Carousel";
 
 export default function WorkGrid() {
 	const [searchTerm, setSearchTerm] = useState("");
@@ -166,6 +164,7 @@ export default function WorkGrid() {
 				{/* map the projects from the projects array into card elements, inside a grid */}
 				{projectsFiltered.map((project, index) => {
 					const slides = project.images.map((image) => ({
+						type: "image" as "image",
 						src: image,
 					}));
 
@@ -175,24 +174,7 @@ export default function WorkGrid() {
 							className="w-full flex flex-col rounded-sm p-0 bg-gunmetal shadow-card shadow-gray-600"
 						>
 							<div className="w-full aspect-[3/2] bg-coral overflow-hidden rounded-t-sm relative">
-								<Lightbox
-									slides={slides}
-									inline={{
-										style: {
-											width: "100%",
-											maxWidth: "900px",
-											aspectRatio: "3 / 2",
-											margin: "0 auto",
-											backgroundSize: "cover",
-										},
-									}}
-									carousel={{
-										spacing: 0,
-										padding: 0,
-										imageFit: "cover",
-									}}
-									plugins={[Inline]}
-								/>
+								<Carousel items={slides} />
 							</div>
 							<div className="flex flex-col gap-1 cursor-default justify-evenly text-xl py-3 bg-paynesgray font-bold text-center">
 								{project.title}
@@ -226,7 +208,7 @@ export default function WorkGrid() {
 										{project.tags.map((tag, index) => (
 											<span
 												key={index}
-												className="bg-slate-100 text-black bg-opacity-70 p-0.5 rounded-sm"
+												className="bg-slate-100 text-black bg-opacity-70 px-1 py-0.5 rounded-sm"
 											>
 												{tag}
 											</span>
