@@ -3,16 +3,6 @@ import { Geist, Geist_Mono, Jersey_15, Poppins } from "next/font/google";
 import "./globals.css";
 import Nav from "@/components/Nav";
 
-const geistSans = Geist({
-	variable: "--font-geist-sans",
-	subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-	variable: "--font-geist-mono",
-	subsets: ["latin"],
-});
-
 const jersey = Jersey_15({
 	variable: "--font-jersey",
 	subsets: ["latin"],
@@ -26,8 +16,8 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-	title: "Portfolio",
-	description: "A personal portfolio in Next.js",
+	title: "home ~ isb",
+	description: "my personal portfolio in Next.js",
 };
 
 export default function RootLayout({
@@ -38,10 +28,12 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<body
-				className={`${geistSans.variable} ${geistMono.variable} ${jersey.variable} ${poppins.variable} antialiased flex flex-col-reverse md:flex-row flex-nowrap h-screen`}
+				className={`${jersey.variable} ${poppins.variable} antialiased flex-row md:flex h-screen`}
 			>
-				<div className="flex-grow">{children}</div>
-				<Nav />
+				<div className="flex-grow overflow-y-auto">{children}</div>
+				<div className="shrink-0 h-screen sticky top-0">
+					<Nav />
+				</div>
 			</body>
 		</html>
 	);
