@@ -1,15 +1,11 @@
 "use client";
 import { useState } from "react";
-// import { usePathname } from "next/navigation";
 import Head from "next/head";
 import Image from "next/image";
-
-import CVModal from "../components/CVModal";
-import Nav from "@/components/Nav";
-
+import CVModal from "@/components/CVModal";
 import HomeBg from "@/public/home.webp";
 
-export default function Home() {
+export default function HomePage() {
 	const [isModalOpen, setIsModalOpen] = useState(false);
 
 	return (
