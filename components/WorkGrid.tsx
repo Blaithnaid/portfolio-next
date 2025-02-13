@@ -154,11 +154,12 @@ export default function WorkGrid() {
 
 	return (
 		<>
-			<Head>
+			{/* preload all images */}
+			{/* <Head>
 				{allImages.map((imgSrc) => (
 					<link key={imgSrc} rel="preload" as="image" href={imgSrc} />
 				))}
-			</Head>
+			</Head> */}
 			<div className="bg-slate-600 bg-opacity-70 p-2 h-max w-full flex flex-col justify-start items-center">
 				<div className="bg-gunmetal my-4 md:my-8 shadow-lg shadow-gunmetal h-16 rounded-sm w-full md:max-w-[30rem] md:w-full">
 					<input

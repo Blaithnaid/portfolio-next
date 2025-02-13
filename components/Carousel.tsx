@@ -38,7 +38,7 @@ export default function Carousel({ items, initialIndex = 0 }: CarouselProps) {
 	return (
 		<>
 			{/* Carousel container */}
-			<div className="relative w-full h-full flex items-center justify-center bg-black">
+			<div className="relative w-full h-full flex flex-col items-center justify-center bg-black">
 				{/* Main item */}
 				<div className="relative w-full h-full flex items-center justify-center">
 					{currentItem.type === "image" ? (
@@ -48,6 +48,8 @@ export default function Carousel({ items, initialIndex = 0 }: CarouselProps) {
 							fill
 							style={{ objectFit: "cover" }}
 							sizes="100vw"
+							onClick={() => setLightboxOpen(true)}
+							className="hover:cursor-pointer"
 						/>
 					) : (
 						<iframe
@@ -60,7 +62,7 @@ export default function Carousel({ items, initialIndex = 0 }: CarouselProps) {
 					)}
 				</div>
 
-				<div className="absolute bottom-0 right-0 flex flex-row bg-black/50">
+				{/* <div className="absolute top-0 right-0 flex flex-row bg-black/50">
 					<ChevronLeftIcon
 						className="z-10 size-8 hover:bg-black/50 hover:cursor-pointer"
 						onClick={prevSlide}
@@ -78,6 +80,21 @@ export default function Carousel({ items, initialIndex = 0 }: CarouselProps) {
 					>
 						<MagnifyingGlassPlusIcon className="h-6 w-6" />
 					</button>
+				</div> */}
+				<div className="h-fit p-2 w-full bg-gunmetal flex items-center">
+					<div className="flex justify-center gap-2 w-full">
+						{items.map((_, index) => (
+							<div
+								key={index}
+								className={`h-1.5 flex-grow rounded-full hover:cursor-pointer hover:bg-white/50 ${
+									index === currentIndex
+										? "bg-white"
+										: "bg-white/30"
+								}`}
+								onClick={() => setCurrentIndex(index)}
+							></div>
+						))}
+					</div>
 				</div>
 			</div>
 
