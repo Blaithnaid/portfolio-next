@@ -81,18 +81,25 @@ export default function Carousel({ items, initialIndex = 0 }: CarouselProps) {
 						<MagnifyingGlassPlusIcon className="h-6 w-6" />
 					</button>
 				</div> */}
-				<div className="h-fit p-2 w-full bg-gunmetal flex items-center">
-					<div className="flex justify-center gap-2 w-full">
+				<div className="h-fit w-full bg-gunmetal flex items-center">
+					<div className="flex justify-center w-full h-6 p-0 ">
 						{items.map((_, index) => (
-							<div
+							<button
 								key={index}
-								className={`h-1.5 flex-grow rounded-full hover:cursor-pointer hover:bg-white/50 ${
-									index === currentIndex
-										? "bg-white"
-										: "bg-white/30"
-								}`}
 								onClick={() => setCurrentIndex(index)}
-							></div>
+								className="group flex-grow relative cursor-pointer bg-transparent border-none p-0 first:pl-2 last:pr-2 focus:outline-none"
+								aria-label={`Go to slide ${index + 1}`}
+							>
+								{/* The circle is absolutely centered, but the parent is fully clickable */}
+								<div
+									className={`
+										absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
+										w-[90%] h-1.5 rounded-full
+										${index === currentIndex ? "bg-white" : "bg-white/30"}
+										group-hover:bg-white/50
+									`}
+								/>
+							</button>
 						))}
 					</div>
 				</div>
