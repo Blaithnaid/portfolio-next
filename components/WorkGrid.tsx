@@ -48,14 +48,14 @@ export default function WorkGrid() {
 					url: "https://tinahelypetlodge.ie/",
 				},
 				{
-					name: "google my business",
+					name: "google the business",
 					url: "https://g.page/Tinahely%20Pet%20Lodge/",
 				},
 			],
 		},
 		{
 			title: "Spat",
-			subheading: "local multiplayer card game",
+			subheading: "2p local multiplayer card game",
 			images: [
 				"/projects/spat-1.webp",
 				"/projects/spat-2.webp",
@@ -88,6 +88,18 @@ export default function WorkGrid() {
 					url: "https://github.com/Blaithnaid/drq-project/tree/main/",
 				},
 			],
+		},
+		{
+			title: "Sitka NG",
+			subheading: "music player/manager in an Electron app using Angular",
+			images: [
+				"/projects/sitka-1.webp",
+				"/projects/sitka-2.webp",
+				"/projects/sitka-3.webp",
+			],
+			description:
+				"a project i was working on with some good friends. we wanted to make a music player that wasn't ugly or bloated. it was being built in parallel with react, and i was reimplementing it in angular. hopefully it will be finished one day!",
+			tags: ["angular", "electron", "javascript", "web design"],
 		},
 		{
 			title: "Jasmine Jewellery",
@@ -132,15 +144,6 @@ export default function WorkGrid() {
 					url: "https://blaithnaid.github.io/wdsem1/",
 				},
 			],
-		},
-		{
-			title: "Sitka NG",
-			subheading:
-				"music player and manager in an Electron app using Angular",
-			images: ["/projects/sitka-ng-1.webp"],
-			description:
-				"a project i was working on with some good friends. we wanted to make a music player that wasn't ugly or bloated. it was being built in parallel with react, and i was reimplementing it in angular. hopefully it will be finished one day!",
-			tags: ["angular", "electron", "javascript", "web design"],
 		},
 	];
 
@@ -209,7 +212,7 @@ export default function WorkGrid() {
 														href={link.url}
 														target="_blank"
 														rel="noreferrer"
-														className="bg-slate-600 bg-opacity-70 p-2 rounded-sm hover:bg-coral"
+														className="bg-slate-600 bg-opacity-70 p-2 rounded-sm hover:bg-coral transition-colors duration-150"
 													>
 														{link.name}
 													</a>

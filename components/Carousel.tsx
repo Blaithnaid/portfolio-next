@@ -61,26 +61,6 @@ export default function Carousel({ items, initialIndex = 0 }: CarouselProps) {
 						/>
 					)}
 				</div>
-
-				{/* <div className="absolute top-0 right-0 flex flex-row bg-black/50">
-					<ChevronLeftIcon
-						className="z-10 size-8 hover:bg-black/50 hover:cursor-pointer"
-						onClick={prevSlide}
-						aria-label="Previous Slide"
-					/>
-					<ChevronRightIcon
-						className="z-10 size-8 hover:bg-black/50 hover:cursor-pointer"
-						onClick={nextSlide}
-						aria-label="Next Slide"
-					/>
-					<button
-						className="z-10 p-1 hover:bg-black/50 text-white hover:cursor-pointer"
-						onClick={() => setLightboxOpen(true)}
-						aria-label="Open Lightbox"
-					>
-						<MagnifyingGlassPlusIcon className="h-6 w-6" />
-					</button>
-				</div> */}
 				<div className="h-fit w-full bg-gunmetal flex items-center">
 					<div className="flex justify-center w-full h-6 p-0 ">
 						{items.map((_, index) => (
@@ -94,9 +74,9 @@ export default function Carousel({ items, initialIndex = 0 }: CarouselProps) {
 								<div
 									className={`
 										absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
-										w-[90%] h-1.5 rounded-full
+										w-[95%] h-2.5 rounded-full
 										${index === currentIndex ? "bg-white" : "bg-white/30"}
-										group-hover:bg-white/50
+										group-hover:bg-white/50 transition-colors duration-75
 									`}
 								/>
 							</button>
