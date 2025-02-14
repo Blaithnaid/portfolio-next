@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import { motion } from "motion/react";
 import { usePathname } from "next/navigation";
 import {
 	HomeIcon as HomeSolid,
@@ -84,18 +85,30 @@ export default function Nav() {
 						<Link
 							key={item.name}
 							href={item.href}
-							className="font-poppins text-white hover:underline hover:text-white flex items-center gap-2"
+							className="font-poppins text-white flex items-center gap-2 hover:underline hover:text-white relative"
 							onMouseEnter={() => setHoveredItem(item.name)}
 							onMouseLeave={() => setHoveredItem(null)}
 						>
-							{hoveredItem === item.name ? (
+							<div className="relative w-10 h-10">
+								{/* Solid icon */}
+								<item.solidIcon
+									className={`absolute inset-0 transition-opacity duration-200 ${
+										hoveredItem === item.name
+											? "opacity-0"
+											: "opacity-100"
+									}`}
+								/>
+
+								{/* Outline icon */}
 								<item.outlineIcon
-									className="h-10 w-10"
+									className={`absolute inset-0 transition-opacity duration-200 ${
+										hoveredItem === item.name
+											? "opacity-100"
+											: "opacity-0"
+									}`}
 									title={item.name}
 								/>
-							) : (
-								<item.solidIcon className="h-10 w-10" />
-							)}
+							</div>
 						</Link>
 					))}
 				</div>
