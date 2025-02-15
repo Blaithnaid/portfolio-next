@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Jersey_15, Poppins } from "next/font/google";
+import { Jersey_15, Poppins } from "next/font/google";
 import "./globals.css";
 import Nav from "@/components/Nav";
 
