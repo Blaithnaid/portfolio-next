@@ -21,7 +21,7 @@ export default function WorkPage() {
 						<p className="">
 							welcome to the portfolio proper! great to have you.
 							this is where i keep a catalog of a lot of the work
-							i've done over the years across different
+							i&apos;ve done over the years across different
 							disciplines.
 						</p>
 						<p>
