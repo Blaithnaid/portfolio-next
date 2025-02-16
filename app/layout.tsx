@@ -31,9 +31,7 @@ export default function RootLayout({
 				className={`${jersey.variable} ${poppins.variable} antialiased flex flex-col-reverse md:flex-row h-screen`}
 			>
 				<div className="flex-grow overflow-y-auto">{children}</div>
-				<div className="shrink-0 h-screen sticky top-0">
-					<Nav />
-				</div>
+				<Nav />
 			</body>
 		</html>
 	);

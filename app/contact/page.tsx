@@ -14,7 +14,7 @@ export default function ContactPage() {
 			className="flex flex-col justify-center items-center p-4 bg-cover bg-center w-full h-[calc(100vh-12.5rem)] md:h-screen"
 			style={{ backgroundImage: `url(${ContactBg.src})` }}
 		>
-			<div className="w-full md:w-[28rem] min-h-[40rem] text-left text-lg relative">
+			<div className="w-full md:w-[28rem] text-left text-lg relative">
 				<motion.div
 					initial={{ opacity: 0 }}
 					animate={{ opacity: 1 }}
