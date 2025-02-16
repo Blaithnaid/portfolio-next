@@ -1,6 +1,5 @@
 "use client";
 import { useState } from "react";
-import Head from "next/head";
 import Carousel from "./Carousel";
 import projects from "@/public/projects.json";
 
@@ -13,16 +12,8 @@ export default function WorkGrid() {
 			.includes(searchTerm.trim().toLowerCase());
 	});
 
-	const allImages = projectsFiltered.flatMap((proj) => proj.images);
-
 	return (
 		<>
-			{/* preload all images */}
-			{/* <Head>
-				{allImages.map((imgSrc) => (
-					<link key={imgSrc} rel="preload" as="image" href={imgSrc} />
-				))}
-			</Head> */}
 			<div className="bg-slate-600 bg-opacity-70 p-2 h-max w-full flex flex-col justify-start items-center">
 				<div className="bg-gunmetal my-4 md:my-8 shadow-lg shadow-gunmetal h-16 rounded-sm w-full md:max-w-[30rem] md:w-full">
 					<input
@@ -34,10 +25,9 @@ export default function WorkGrid() {
 					/>
 				</div>
 				<div className="max-h-max min-h-64 w-full md:px-10 lg:px-20 grid grid-cols-1 auto-rows-max lg:grid-cols-2 gap-8 p-2">
-					{/* map the projects from the projects array into card elements, inside a grid */}
 					{projectsFiltered.map((project, index) => {
 						const slides = project.images.map((image) => ({
-							type: "image" as "image",
+							type: "image" as const,
 							src: image,
 						}));
 
