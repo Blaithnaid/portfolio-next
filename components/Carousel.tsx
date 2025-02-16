@@ -2,13 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import Head from "next/head";
-import {
-	XMarkIcon,
-	ChevronLeftIcon,
-	ChevronRightIcon,
-	MagnifyingGlassPlusIcon,
-} from "@heroicons/react/16/solid";
+import { XMarkIcon } from "@heroicons/react/16/solid";
 
 type CarouselItem = {
 	type: "image" | "video";
@@ -26,14 +20,6 @@ export default function Carousel({ items, initialIndex = 0 }: CarouselProps) {
 	const [lightboxOpen, setLightboxOpen] = useState(false);
 
 	const currentItem = items[currentIndex];
-
-	const nextSlide = () => {
-		setCurrentIndex((prev) => (prev + 1) % items.length);
-	};
-
-	const prevSlide = () => {
-		setCurrentIndex((prev) => (prev - 1 + items.length) % items.length);
-	};
 
 	return (
 		<>
