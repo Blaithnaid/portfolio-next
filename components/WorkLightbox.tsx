@@ -15,25 +15,7 @@ interface Slide {
 	blurDataURL?: string;
 }
 
-interface Rect {
-	width: number;
-	height: number;
-}
-
-interface NextJsImageProps {
-	slide: {
-		src: string;
-		width: number;
-		height?: number;
-	};
-	offset: number;
-	rect: {
-		width: number;
-		height: number;
-	};
-}
-
-function isNextJsImage(slide: any): slide is Slide {
+function isNextJsImage(slide: SlideImage): slide is Slide {
 	return (
 		isImageSlide(slide) &&
 		typeof slide.width === "number" &&

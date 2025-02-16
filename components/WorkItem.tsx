@@ -12,7 +12,7 @@ interface Project {
 
 export default function WorkItem(project: Project) {
 	const slides = project.images.map((image) => ({
-		type: "image" as "image",
+		type: "image" as const,
 		src: image,
 	}));
 
