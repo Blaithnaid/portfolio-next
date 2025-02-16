@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import Head from "next/head";
+import * as motion from "motion/react-client";
 import CVModal from "@/components/CVModal";
 import HomeBg from "@/public/home.webp";
 
@@ -9,15 +9,16 @@ export default function HomePage() {
 
 	return (
 		<>
-			<Head>
-				<title>home ~ isb</title>
-			</Head>
 			<div
 				className="flex flex-col justify-end items-end p-4 bg-cover bg-center w-full h-[calc(100vh-12.5rem)] md:h-screen"
 				style={{ backgroundImage: `url(${HomeBg.src})` }}
 			>
 				<div className="w-full md:w-[500px] min-h-[15rem] text-left text-lg relative">
-					<div className="absolute inset-0 bg-[#253956] bg-blend-color-burn mix-blend-color-burn"></div>
+					<motion.div
+						initial={{ opacity: 0 }}
+						animate={{ opacity: 1 }}
+						className="absolute inset-0 bg-[#253956] bg-blend-color-burn mix-blend-color-burn"
+					></motion.div>
 					<div className="flex flex-col gap-1 border-2 border-white border-dashed justify-between relative z-10 p-4 h-full hover:cursor-default">
 						<p>
 							<b>hi! i&apos;m iarla.</b> i&apos;m a software
@@ -32,16 +33,13 @@ export default function HomePage() {
 							get in touch.
 						</p>
 						<p>
-							just interested in seeing my cv? you can take a look
-							<b>
-								{" "}
-								<span
-									className="text-slate-300 hover:text-neonpurple underline cursor-pointer"
-									onClick={() => setIsModalOpen(true)}
-								>
-									here
-								</span>
-							</b>
+							just interested in seeing my cv? you can take a look{" "}
+							<span
+								className="text-slate-300 font-bold hover:text-neonpurple underline cursor-pointer"
+								onClick={() => setIsModalOpen(true)}
+							>
+								here
+							</span>
 							.
 						</p>
 					</div>
