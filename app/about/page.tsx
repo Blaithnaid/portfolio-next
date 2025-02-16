@@ -39,6 +39,11 @@ export default function AboutPage() {
 						</a>
 						, but i didn&apos;t get very far.
 					</p>
+					<p>
+						finally, when i was around 15 or 16, i started following
+						a course on python 3. i loved how easily understandable
+						the syntax was
+					</p>
 					<p></p>
 				</div>
 			</div>
