@@ -15,13 +15,13 @@ export default function WorkGrid() {
 	return (
 		<>
 			<div className="bg-slate-600 bg-opacity-70 p-2 h-max w-full flex flex-col justify-start items-center">
-				<div className="bg-gunmetal my-4 md:my-8 shadow-lg shadow-gunmetal h-16 rounded-sm w-full md:max-w-[30rem] md:w-full">
+				<div className="bg-gunmetal my-4 md:my-8 shadow-lg shadow-gunmetal h-16 rounded-xs w-full md:max-w-[30rem] md:w-full">
 					<input
 						type="text"
 						placeholder="search projects..."
 						value={searchTerm}
 						onChange={(e) => setSearchTerm(e.target.value)}
-						className="w-full h-full bg-transparent text-silver px-4 focus:outline-none"
+						className="w-full h-full bg-transparent text-silver px-4 focus:outline-hidden"
 					/>
 				</div>
 				<div className="max-h-max min-h-64 w-full md:px-10 lg:px-20 grid grid-cols-1 auto-rows-max lg:grid-cols-2 gap-8 p-2">
@@ -34,9 +34,9 @@ export default function WorkGrid() {
 						return (
 							<div
 								key={index}
-								className="w-full flex flex-col rounded-sm p-0 bg-gunmetal shadow-card shadow-gray-600"
+								className="w-full flex flex-col rounded-xs p-0 bg-gunmetal shadow-card shadow-gray-600"
 							>
-								<div className="w-full aspect-[3/2] bg-coral overflow-hidden rounded-t-sm relative">
+								<div className="w-full aspect-3/2 bg-coral overflow-hidden rounded-t-sm relative">
 									<Carousel items={slides} />
 								</div>
 								<div className="flex flex-col gap-1 cursor-default justify-evenly text-xl py-3 bg-paynesgray font-bold text-center">
@@ -62,7 +62,7 @@ export default function WorkGrid() {
 														href={link.url}
 														target="_blank"
 														rel="noreferrer"
-														className="bg-slate-600 bg-opacity-70 p-2 rounded-sm hover:bg-coral transition-colors duration-150"
+														className="bg-slate-600 bg-opacity-70 p-2 rounded-xs hover:bg-coral transition-colors duration-150"
 													>
 														{link.name}
 													</a>
@@ -73,7 +73,7 @@ export default function WorkGrid() {
 											{project.tags.map((tag, index) => (
 												<span
 													key={index}
-													className="bg-slate-100 text-black bg-opacity-70 px-1 py-0.5 rounded-sm"
+													className="bg-slate-100 text-black bg-opacity-70 px-1 py-0.5 rounded-xs"
 												>
 													{tag}
 												</span>

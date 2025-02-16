@@ -53,21 +53,21 @@ export default function EmailForm() {
 						type="text"
 						name="from_name"
 						placeholder="who are you?*"
-						className="w-full h-10 bg-white/30 border-2 border-white/50 text-white placeholder-slate-300 px-3 focus:outline-none"
+						className="w-full h-10 bg-white/30 border-2 border-white/50 text-white placeholder-slate-300 px-3 focus:outline-hidden"
 						required
 					/>
 					<input
 						type="email"
 						name="reply_to"
 						placeholder="what's your email?*"
-						className="w-full h-10 bg-white/30 border-2 border-white/50 text-white placeholder-slate-300 px-3 focus:outline-none"
+						className="w-full h-10 bg-white/30 border-2 border-white/50 text-white placeholder-slate-300 px-3 focus:outline-hidden"
 						required
 					/>
 					<textarea
 						name="message"
 						rows={12}
 						placeholder="how can i help you?"
-						className="w-full h-max bg-white/20 border-2 border-white/50 text-white placeholder-slate-200 px-3 focus:outline-none pt-[5px]"
+						className="w-full h-max bg-white/20 border-2 border-white/50 text-white placeholder-slate-200 px-3 focus:outline-hidden pt-[5px]"
 					></textarea>
 				</div>
 				<div className="flex justify-between">

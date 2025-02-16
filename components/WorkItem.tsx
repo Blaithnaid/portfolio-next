@@ -17,8 +17,8 @@ export default function WorkItem(project: Project) {
 	}));
 
 	return (
-		<div className="w-full flex flex-col rounded-sm p-0 bg-gunmetal shadow-card shadow-gray-600">
-			<div className="w-full aspect-[3/2] bg-coral overflow-hidden rounded-t-sm relative">
+		<div className="w-full flex flex-col rounded-xs p-0 bg-gunmetal shadow-card shadow-gray-600">
+			<div className="w-full aspect-3/2 bg-coral overflow-hidden rounded-t-sm relative">
 				<Carousel items={slides} />
 			</div>
 			<div className="flex flex-col gap-1 cursor-default justify-evenly text-xl py-3 bg-paynesgray font-bold text-center">
@@ -39,7 +39,7 @@ export default function WorkItem(project: Project) {
 								href={link.url}
 								target="_blank"
 								rel="noreferrer"
-								className="bg-slate-600 bg-opacity-70 p-2 rounded-sm hover:bg-coral"
+								className="bg-slate-600 bg-opacity-70 p-2 rounded-xs hover:bg-coral"
 							>
 								{link.name}
 							</a>
@@ -49,7 +49,7 @@ export default function WorkItem(project: Project) {
 						{project.tags.map((tag, index) => (
 							<span
 								key={index}
-								className="bg-slate-100 text-black bg-opacity-70 px-1 py-0.5 rounded-sm"
+								className="bg-slate-100 text-black bg-opacity-70 px-1 py-0.5 rounded-xs"
 							>
 								{tag}
 							</span>

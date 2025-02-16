@@ -53,7 +53,7 @@ export default function Carousel({ items, initialIndex = 0 }: CarouselProps) {
 							<button
 								key={index}
 								onClick={() => setCurrentIndex(index)}
-								className="group flex-grow relative cursor-pointer bg-transparent border-none p-0 first:pl-2 last:pr-2 focus:outline-none"
+								className="group grow relative cursor-pointer bg-transparent border-none p-0 first:pl-2 last:pr-2 focus:outline-hidden"
 								aria-label={`Go to slide ${index + 1}`}
 							>
 								{/* The circle is absolutely centered, but the parent is fully clickable */}
