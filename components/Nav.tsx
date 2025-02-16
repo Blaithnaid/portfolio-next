@@ -115,7 +115,7 @@ export default function Nav() {
 					))}
 				</div>
 			</div>
-			<div className="h-0 md:h-12 text-silver text-md cursor-default text-center">
+			<div className="h-0 md:h-12 text-silver text-md cursor-default text-center hidden md:block">
 				site by me ~{" "}
 				<a
 					className="text-neonpurple hover:text-indigo-600 cursor-pointer underline"
