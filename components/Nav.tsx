@@ -1,8 +1,8 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Link from "next/link";
-import { motion } from "motion/react";
 import { usePathname } from "next/navigation";
+import * as motion from "motion/react-client";
 import {
 	HomeIcon as HomeSolid,
 	BriefcaseIcon as BriefcaseSolid,
@@ -20,44 +20,40 @@ const navigation = [
 	{
 		name: "home",
 		href: "/",
+		title: "home",
 		solidIcon: HomeSolid,
 		outlineIcon: HomeOutline,
 	},
 	{
 		name: "work",
 		href: "/work",
+		title: "my work",
 		solidIcon: BriefcaseSolid,
 		outlineIcon: BriefcaseOutline,
 	},
 	{
 		name: "about me",
 		href: "/about",
+		title: "about me",
 		solidIcon: InformationCircleSolid,
 		outlineIcon: InformationCircleOutline,
 	},
 	{
 		name: "contact",
 		href: "/contact",
+		title: "contact",
 		solidIcon: EnvelopeSolid,
 		outlineIcon: EnvelopeOutline,
 	},
 ];
 
-const pageTitles = {
-	"/home": "home",
-	"/work": "my work",
-	"/about": "about me",
-	"/contact": "contact",
-};
-
 export default function Nav() {
-	const pathname = usePathname() as keyof typeof pageTitles;
+	const pathname = usePathname();
 	const [hoveredItem, setHoveredItem] = useState<string | null>(null);
-	const [currentPage, setCurrentPage] = useState("");
 
-	useEffect(() => {
-		setCurrentPage(pageTitles[pathname] || "home");
-	}, [pathname]);
+	// Find the navigation entry whose href matches the current path
+	const currentNavItem = navigation.find((nav) => nav.href === pathname);
+	const currentPage = currentNavItem?.title || " ";
 
 	return (
 		<div className="flex flex-col justify-between min-w-80 bg-gunmetal md:h-screen">
@@ -76,10 +72,17 @@ export default function Nav() {
 					software developer ~ sound engineer
 				</div>
 			</div>
-			<div className="flex flex-nowrap flex-col shrink items-center justify-center align-center pb-5">
-				<div className="text-white text-2xl font-poppins cursor-default underline">
+			{/* Page title with animation */}
+			<div className="flex flex-nowrap flex-col shrink items-center overflow-hidden justify-center align-center pb-5">
+				<motion.div
+					className="text-white text-center w-fit text-2xl font-poppins cursor-default underline"
+					key={currentPage}
+					initial={{ translateY: -100 }}
+					animate={{ translateY: 0 }}
+					transition={{ duration: 0.3, type: "spring" }}
+				>
 					<b>{currentPage}</b>
-				</div>
+				</motion.div>
 				<div className="flex flex-row items-center gap-2 mt-5">
 					{navigation.map((item) => (
 						<Link
@@ -98,7 +101,6 @@ export default function Nav() {
 											: "opacity-100"
 									}`}
 								/>
-
 								{/* Outline icon */}
 								<item.outlineIcon
 									className={`absolute inset-0 transition-opacity duration-200 ${
