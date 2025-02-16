@@ -23,7 +23,8 @@ export default function ContactPage() {
 				<div className="flex flex-col gap-1 border-2 border-white border-dashed relative z-10 p-4 h-full hover:cursor-default">
 					<p>looking to get in contact with me?</p>
 					<p className="mb-4">
-						fill out some details below and it'll go straight to me!
+						fill out some details below and it&apos;ll go straight
+						to me!
 					</p>
 					<EmailForm />
 				</div>

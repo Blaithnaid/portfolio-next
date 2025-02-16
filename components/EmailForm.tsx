@@ -34,7 +34,7 @@ export default function EmailForm() {
 
 	if (sendStatus === "success") {
 		return (
-			<div className="p-4 flex flex-col justify-center items-center text-white bg-black/80 text-xl font-normal text-md min-h-52">
+			<div className="p-4 flex flex-col justify-center items-center text-white bg-black/80 -m-4 text-xl font-normal text-md min-h-52">
 				<p>your message has been sent!</p>
 				<p>thank you for ur time :)</p>
 			</div>
