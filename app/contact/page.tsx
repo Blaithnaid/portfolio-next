@@ -1,6 +1,6 @@
-import Head from "next/head";
 import ContactBg from "@/public/contact.webp";
 import type { Metadata } from "next";
+import * as motion from "motion/react-client";
 
 export const metadata: Metadata = {
 	title: "contact ~ isb",
@@ -10,12 +10,24 @@ export const metadata: Metadata = {
 export default function ContactPage() {
 	return (
 		<div
-			className="flex flex-row flex-nowrap bg-cover bg-center w-full h-screen relative"
+			className="flex flex-col justify-center items-center p-4 bg-cover bg-center w-full h-[calc(100vh-12.5rem)] md:h-screen"
 			style={{ backgroundImage: `url(${ContactBg.src})` }}
 		>
-			<Head>
-				<title>contact ~ isb</title>
-			</Head>
+			<div className="w-full md:w-[28rem] min-h-[40rem] text-left text-lg relative">
+				<motion.div
+					initial={{ opacity: 0 }}
+					animate={{ opacity: 1 }}
+					className="absolute inset-0 bg-[#817059] bg-blend-color-burn mix-blend-color-burn"
+				></motion.div>
+				<div className="flex flex-col gap-1 border-2 border-white border-dashed relative z-10 p-4 h-full hover:cursor-default">
+					<p>looking to get in contact with me?</p>
+					<p>
+						fill out some details below and it'll go straight to me!
+					</p>
+					<form action=""></form>
+				</div>
+			</div>
 		</div>
 	);
 }
+// #42acac

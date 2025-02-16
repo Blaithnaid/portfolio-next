@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import WorkBg from "@/public/work.jpg";
 import WorkGrid from "@/components/WorkGrid";
+import * as motion from "motion/react-client";
+import { AnimatePresence } from "motion/react";
 
 export const metadata: Metadata = {
 	title: "my work ~ isb",
@@ -16,7 +18,11 @@ export default function WorkPage() {
 				style={{ backgroundImage: `url(${WorkBg.src})` }}
 			>
 				<div className="w-full md:w-[500px] min-h-56 text-left text-lg relative">
-					<div className="absolute inset-0 bg-[#42acac] bg-blend-color-burn mix-blend-color-burn"></div>
+					<motion.div
+						initial={{ opacity: 0 }}
+						animate={{ opacity: 1 }}
+						className="absolute inset-0 bg-[#42acac] bg-blend-color-burn mix-blend-color-burn"
+					></motion.div>
 					<div className="flex flex-col gap-1 border-2 border-white border-dashed justify-between relative z-10 p-4 h-full">
 						<p className="">
 							welcome to the portfolio proper! great to have you.
@@ -25,9 +31,9 @@ export default function WorkPage() {
 							disciplines.
 						</p>
 						<p>
-							stuff is organised according to the kind of media it
-							incorporates, as well as the
-							languages/frameworks/tools used to build it.
+							projects are organised according to the kind of
+							media they incorporate, as well as the
+							languages/frameworks/tools used to build them.
 						</p>
 						<div className="place-self-center mt-4 cursor-default animate-bounce">
 							scroll down{" "}
