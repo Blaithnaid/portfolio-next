@@ -6,7 +6,7 @@ import * as motion from "motion/react-client";
 export const metadata: Metadata = {
 	title: "my work ~ isb",
 	description:
-		"a searchable list of my work, organised by the tools or media used to create it",
+		"a searchable list of my projects, organised by the tools or media used to create them",
 };
 
 export default function WorkPage() {
