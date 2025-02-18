@@ -1,14 +1,9 @@
-"use client";
-import { useState } from "react";
 import * as motion from "motion/react-client";
-import CVModal from "@/components/CVModal";
+import CVSpan from "@/components/CV";
 import HomeBg from "@/public/home.webp";
 
 export default function HomePage() {
-	const [isModalOpen, setIsModalOpen] = useState(false);
-
 	return (
-		<>
 			<div
 				className="flex flex-col justify-end items-end p-4 bg-cover bg-center w-full h-[calc(100vh-12.5rem)] md:h-screen"
 				style={{ backgroundImage: `url(${HomeBg.src})` }}
@@ -32,23 +27,12 @@ export default function HomePage() {
 							(the little envelope in the navbar!) if you want to
 							get in touch.
 						</p>
-						<p>
+						<div>
 							just interested in seeing my cv? you can take a look{" "}
-							<span
-								className="text-slate-300 font-bold hover:text-neonpurple underline cursor-pointer"
-								onClick={() => setIsModalOpen(true)}
-							>
-								here
-							</span>
-							.
-						</p>
+							<CVSpan />
+						</div>
 					</div>
 				</div>
 			</div>
-			<CVModal
-				isOpen={isModalOpen}
-				onClose={() => setIsModalOpen(false)}
-			/>
-		</>
 	);
 }
