@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import WorkBg from "@/public/work.jpg";
 import WorkGrid from "@/components/WorkGrid";
 import * as motion from "motion/react-client";
+import {
+	ArrowLongDownIcon as ArrowDown
+} from "@heroicons/react/24/solid";
 
 export const metadata: Metadata = {
 	title: "my work ~ isb",
@@ -37,7 +40,11 @@ export default function WorkPage() {
 						<div className="place-self-center mt-4 cursor-default animate-bounce">
 							scroll down{" "}
 							<div className="inline-block">
-								<b>↓↓↓</b>
+								<div>
+									<ArrowDown className="inline size-6 -mx-1.5 -mt-0.5" />
+									<ArrowDown className="inline size-6 -mx-1.5 -mt-0.5" />
+									<ArrowDown className="inline size-6 -mx-1.5 -mt-0.5" />
+								</div>
 							</div>{" "}
 							to see my work!
 						</div>
