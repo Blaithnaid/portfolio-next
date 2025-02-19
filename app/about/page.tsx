@@ -13,7 +13,7 @@ export default function AboutPage() {
 			className="flex flex-col justify-start items-center p-4 gap-4 bg-cover bg-center w-full h-[calc(100vh-12.5rem)] md:h-screen"
 			style={{ backgroundImage: `url(${AboutBg.src})` }}
 		>
-			<div className="grid grid-cols-2 grid-auto-rows gap-px w-3/4 h-full border-2 border-pink">
+			<div className="grid grid-cols-2 auto-rows-fr gap-4 w-4/5 h-full">
 				<div className="w-full self-center text-left text-lg relative">
 					<motion.div
 						initial={{ opacity: 0 }}
@@ -61,14 +61,31 @@ export default function AboutPage() {
 					></motion.div>
 					<div className="flex flex-col gap-1 border-2 text-white border-white border-dashed justify-between relative z-10 p-4 h-full hover:cursor-default">
 						<p>
-							some stuff i&apos;d really like to learn more about/work on in future:
+							some stuff i&apos;d really like to learn more
+							about/work on in future:
 						</p>
 						<ul className="list-disc list-inside">
+							<li>
+								learn rust or zig or some other low-level
+								language!
+							</li>
+							<li>train/customise an llm</li>
+							<li>
+								get more familiar with linux (i'm writing this
+								sentence on{" "}
+								<a
+									className="underline font-bold text-silver hover:text-silver/80"
+									href="https://manjaro.org/"
+								>
+									manjaro
+								</a>
+								!)
+							</li>
+							<li>
+								finish out some of the projects listed on the
+								other page :P
+							</li>
 							<li>item 1</li>
-							<li>item 1</li>
-							<li>item 1</li>
-							<li>item 1</li>
-							<li>item 1</li>		
 						</ul>
 					</div>
 				</div>
