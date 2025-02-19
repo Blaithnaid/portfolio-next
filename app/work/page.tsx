@@ -25,7 +25,7 @@ export default function WorkPage() {
 						animate={{ opacity: 1 }}
 						className="absolute inset-0 bg-[#42acac] bg-blend-color-burn mix-blend-color-burn"
 					></motion.div>
-					<div className="flex flex-col gap-1 border-2 border-white border-dashed justify-between relative z-10 p-4 h-full">
+					<div className="flex flex-col gap-1 border-2 text-white border-white border-dashed justify-between relative z-10 p-4 h-full">
 						<p className="">
 							welcome to the portfolio proper! great to have you.
 							this is where i keep a catalog of a lot of the work

@@ -14,7 +14,7 @@ export default function HomePage() {
 						animate={{ opacity: 1 }}
 						className="absolute inset-0 bg-[#253956] bg-blend-color-burn mix-blend-color-burn"
 					></motion.div>
-					<div className="flex flex-col gap-1 border-2 border-white border-dashed justify-between relative z-10 p-4 h-full hover:cursor-default">
+					<div className="flex flex-col gap-1 border-2 text-white border-white border-dashed justify-between relative z-10 p-4 h-full hover:cursor-default">
 						<p>
 							<b>hi! i&apos;m iarla.</b> i&apos;m a software
 							developer and sound engineer. this is a little

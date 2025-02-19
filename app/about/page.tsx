@@ -24,7 +24,7 @@ export default function AboutPage() {
 					animate={{ opacity: 1 }}
 					className="absolute inset-0 bg-black/50"
 				></motion.div>
-				<div className="flex flex-col gap-1 border-2 border-white border-dashed justify-between relative z-10 p-4 h-full hover:cursor-default">
+				<div className="flex flex-col gap-1 border-2 text-white border-white border-dashed justify-between relative z-10 p-4 h-full hover:cursor-default">
 					<p>
 						i&apos;ve been interested in computers for as long as i
 						can remember them existing. my first experience

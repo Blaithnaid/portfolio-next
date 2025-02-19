@@ -20,8 +20,8 @@ export default function EmailForm() {
 
 		try {
 			await emailjs.sendForm(
-				process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || "",
-				process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || "",
+				process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID ?? "",
+				process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID ?? "",
 				formRef.current,
 				process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
 			);
@@ -42,7 +42,6 @@ export default function EmailForm() {
 	}
 
 	return (
-		<>
 			<form
 				ref={formRef}
 				onSubmit={handleSubmit}
@@ -92,6 +91,5 @@ export default function EmailForm() {
 					</button>
 				</div>
 			</form>
-		</>
 	);
 }
