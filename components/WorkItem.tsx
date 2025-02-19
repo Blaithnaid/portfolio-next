@@ -21,14 +21,14 @@ export default function WorkItem(project: Project) {
 			<div className="w-full aspect-3/2 bg-coral overflow-hidden rounded-t-sm relative">
 				<Carousel items={slides} />
 			</div>
-			<div className="flex flex-col gap-1 cursor-default justify-evenly text-xl py-3 bg-paynesgray font-bold text-center">
+			<div className="flex flex-col gap-1 cursor-default justify-evenly text-xl py-3 bg-paynesgray text-white font-bold text-center">
 				{project.title}
 				<div className="text-silver flex justify-center items-center font-jersey font-light px-3 text-pretty">
 					-<i className="mx-1.5">{project.subheading}</i>-
 				</div>
 			</div>
 			<div className="flex flex-col justify-between flex-1">
-				<div className="px-4 text-pretty font-poppins font-normal text-left p-3">
+				<div className="px-4 text-pretty font-poppins text-white font-normal text-left p-3">
 					{project.description}
 				</div>
 				<div className="mt-auto">
@@ -39,7 +39,7 @@ export default function WorkItem(project: Project) {
 								href={link.url}
 								target="_blank"
 								rel="noreferrer"
-								className="bg-slate-600 bg-opacity-70 p-2 rounded-xs hover:bg-coral"
+								className="bg-slate-600 bg-opacity-70 text-white p-2 rounded-xs hover:bg-coral"
 							>
 								{link.name}
 							</a>
