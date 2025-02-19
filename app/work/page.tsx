@@ -2,9 +2,7 @@ import type { Metadata } from "next";
 import WorkBg from "@/public/work.jpg";
 import WorkGrid from "@/components/WorkGrid";
 import * as motion from "motion/react-client";
-import {
-	ArrowLongDownIcon as ArrowDown
-} from "@heroicons/react/24/solid";
+import { ArrowLongDownIcon as ArrowDown } from "@heroicons/react/24/solid";
 
 export const metadata: Metadata = {
 	title: "my work ~ isb",
