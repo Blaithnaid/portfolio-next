@@ -10,11 +10,11 @@ export const metadata: Metadata = {
 export default function AboutPage() {
 	return (
 		<div
-			className="flex flex-col justify-center items-center p-4 gap-4 bg-cover bg-center w-full h-[calc(100vh-12.5rem)] md:h-screen"
+			className="min-h-screen overflow-y-auto bg-cover bg-center p-4 gap-4"
 			style={{ backgroundImage: `url(${AboutBg.src})` }}
 		>
-			<div className="grid grid-cols-2 auto-rows-fr gap-4 w-3/4 h-fit">
-				<div className="w-full self-stretch text-left text-lg relative">
+			<div className="grid grid-cols-2 gap-4 w-3/4 mx-auto">
+				<div className="text-left text-lg relative">
 					<motion.div
 						initial={{ opacity: 0 }}
 						animate={{ opacity: 1 }}
@@ -43,14 +43,17 @@ export default function AboutPage() {
 						<p>
 							finally, when i was around 15 or 16, i started
 							following a course on python 3. i loved how easily
-							understandable the syntax was and that&apos;s when the coding bug really bit me.
+							understandable the syntax was and that&apos;s when
+							the coding bug really bit me.
 						</p>
 						<p>
-							i&apos;ve hopped from one language to the next depending on what project caught me, and later, what i was learning in university.
+							i&apos;ve hopped from one language to the next
+							depending on what project caught me, and later, what
+							i was learning in university.
 						</p>
 					</div>
 				</div>
-				<div className="w-full self-stretch text-left text-lg relative">
+				<div className="text-left text-lg relative">
 					<motion.div
 						initial={{ opacity: 0 }}
 						animate={{ opacity: 1 }}
@@ -73,8 +76,8 @@ export default function AboutPage() {
 							</li>
 							<li>train/customise an llm</li>
 							<li>
-								get more familiar with linux (i&apos;m writing this
-								sentence on{" "}
+								get more familiar with linux (i&apos;m writing
+								this sentence on{" "}
 								<a
 									className="underline font-bold text-silver hover:text-silver/80"
 									href="https://manjaro.org/"
@@ -94,7 +97,7 @@ export default function AboutPage() {
 						</ul>
 					</div>
 				</div>
-				<div className="w-full self-center text-left text-lg relative">
+				<div className="text-left text-lg relative">
 					<motion.div
 						initial={{ opacity: 0 }}
 						animate={{ opacity: 1 }}
@@ -107,12 +110,16 @@ export default function AboutPage() {
 					></motion.div>
 					<div className="flex flex-col gap-1 border-2 text-white border-white border-dashed relative z-10 p-4 h-full hover:cursor-default">
 						<p>
-							i&apos;m also a sound engineer! (at least, i dabble). i became interested after attending a number of youth music workshops when i was a teenager, and went on to
-							study Studio & Live Sound Production in a Level 6
-							QQI course when i was 18
+							i&apos;m also a sound engineer! (at least, i
+							dabble). i became interested after attending a
+							number of youth music workshops when i was a
+							teenager, and went on to study Studio & Live Sound
+							Production in a Level 6 QQI course when i was 18
 						</p>
 						<p>
-							i worked part-time as a sound engineer for a while and really really enjoyed it. i&apos;d love an opportunity to get more experience!
+							i worked part-time as a sound engineer for a while
+							and really really enjoyed it. i&apos;d love an
+							opportunity to get more experience!
 						</p>
 					</div>
 				</div>
