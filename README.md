@@ -1,4 +1,4 @@
-this is a personal portfolio, originally a bare react/vite app which has now been translated to Next.js
+this is a personal portfolio, originally a bare react/vite app ([this repo](https://github.com/Blaithnaid/portfolio-react/)) which has now been translated to Next.js
 
 you can start it by running `npm run dev`.
 
