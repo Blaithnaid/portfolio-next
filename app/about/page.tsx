@@ -43,10 +43,10 @@ export default function AboutPage() {
 						<p>
 							finally, when i was around 15 or 16, i started
 							following a course on python 3. i loved how easily
-							understandable the syntax was and that's when the coding bug really bit me.
+							understandable the syntax was and that&apos;s when the coding bug really bit me.
 						</p>
 						<p>
-							i've hopped from one language to the next depending on what project caught me, and later, what i was learning in university.
+							i&apos;ve hopped from one language to the next depending on what project caught me, and later, what i was learning in university.
 						</p>
 					</div>
 				</div>
@@ -73,7 +73,7 @@ export default function AboutPage() {
 							</li>
 							<li>train/customise an llm</li>
 							<li>
-								get more familiar with linux (i'm writing this
+								get more familiar with linux (i&apos;m writing this
 								sentence on{" "}
 								<a
 									className="underline font-bold text-silver hover:text-silver/80"
@@ -107,12 +107,12 @@ export default function AboutPage() {
 					></motion.div>
 					<div className="flex flex-col gap-1 border-2 text-white border-white border-dashed relative z-10 p-4 h-full hover:cursor-default">
 						<p>
-							i'm also a sound engineer! (at least, i dabble). i became interested after attending a number of youth music workshops when i was a teenager, and went on to
+							i&apos;m also a sound engineer! (at least, i dabble). i became interested after attending a number of youth music workshops when i was a teenager, and went on to
 							study Studio & Live Sound Production in a Level 6
 							QQI course when i was 18
 						</p>
 						<p>
-							i worked part-time as a sound engineer for a while and really really enjoyed it. i'd love an opportunity to get more experience!
+							i worked part-time as a sound engineer for a while and really really enjoyed it. i&apos;d love an opportunity to get more experience!
 						</p>
 					</div>
 				</div>
