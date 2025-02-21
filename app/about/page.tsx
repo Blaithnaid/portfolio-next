@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 export default function AboutPage() {
 	return (
 		<div
-			className="min-h-screen overflow-y-auto bg-cover bg-center p-4 gap-4"
+			className="min-h-screen overflow-y-auto flex flex-col justify-center bg-cover bg-center  p-4 gap-4"
 			style={{ backgroundImage: `url(${AboutBg.src})` }}
 		>
 			<div className="grid grid-cols-2 gap-4 w-3/4 mx-auto">
