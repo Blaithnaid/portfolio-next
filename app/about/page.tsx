@@ -58,7 +58,7 @@ export default function AboutPage() {
               <li>learn rust or zig or some other low-level language!</li>
               <li>
                 improve my dexterity w/ vim (btw) motions and the editor as a
-                whole. i've been following{" "}
+                whole. i&apos;ve been following{" "}
                 <a
                   className="underline font-bold text-silver hover:text-silver/80"
                   href="https://lazyvim-ambitious-devs.phillips.codes"
@@ -85,7 +85,7 @@ export default function AboutPage() {
                 get better at testing with breakpoints and using a debugger!
               </li>
               <li>
-                get better at managing my dotfiles. i'm looking at using{" "}
+                get better at managing my dotfiles. i&apos;m looking at using{" "}
                 <a
                   className="underline font-bold text-silver hover:text-silver/80"
                   href="https://github.com/RaphGL/Tuckr"
