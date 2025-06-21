@@ -44,6 +44,7 @@ export default function AboutPage() {
             </p>
           </div>
         </GradientTile>
+
         <GradientTile
           className="text-left text-md relative"
           bgcolor="bg-[#253956]"
@@ -97,6 +98,7 @@ export default function AboutPage() {
             </ul>
           </div>
         </GradientTile>
+
         <GradientTile
           className="text-left text-md relative"
           bgcolor="bg-[#253956]"
@@ -116,6 +118,7 @@ export default function AboutPage() {
             </p>
           </div>
         </GradientTile>
+
         <GradientTile
           className="text-left text-md relative"
           bgcolor="bg-[#253956]"
