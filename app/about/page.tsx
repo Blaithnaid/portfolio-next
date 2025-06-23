@@ -21,7 +21,7 @@ export default function AboutPage() {
           <div className="flex flex-col gap-4 border-2 text-white border-white border-dashed relative z-10 p-4 h-full hover:cursor-default">
             <p className="font-extrabold text-xl">where did it start?</p>
             <p>
-              i&apos;ve been interested in computers for as long as i can
+              i&apos;ve been fascinated by computers for as long as i can
               remember knowing they existed. my first experience programming was
               in scratch, followed shortly by some basic html and css. at around
               14 i tried learning c++ to program an{" "}
@@ -83,7 +83,7 @@ export default function AboutPage() {
                 finish out some of the projects listed on the other page :P
               </li>
               <li>
-                get better at testing with breakpoints and using a debugger!
+                get better at testing with breakpoints and using a integrated debugger!
               </li>
               <li>
                 get better at managing my dotfiles. i&apos;m looking at using{" "}
