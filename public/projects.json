@@ -25,6 +25,34 @@
     ]
   },
   {
+    "title": "Wick",
+    "subheading": "Social Media Management",
+    "images": [
+      "/projects/wick-1.webp",
+      "/projects/wick-2.webp",
+      "/projects/wick-3.webp",
+      "/projects/wick-4.webp"
+    ],
+    "description": "created as part of my college final year project, Wick is a social media management app that allows users to backup their Instagram posts, view analytics, and get content suggestions and advice. it is available on both iOS and Android, and a webapp version is available as part of the promotional website.",
+    "tags": [
+      "react",
+      "expo",
+      "firebase",
+      "ionic",
+      "typescript"
+    ],
+    "links": [
+      {
+        "name": "promo site",
+        "url": "https://getwick.live/home"
+      },
+      {
+        "name": "app repo",
+        "url": "https://github.com/Blaithnaid/wick-expo-app/"
+      }
+    ]
+  },
+  {
     "title": "Spat",
     "subheading": "2p local multiplayer card game",
     "images": [
