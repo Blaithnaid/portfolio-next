@@ -109,7 +109,7 @@ export default function AboutPage() {
               i also dabble in sound engineering (and occasionally producing!).
               i became interested after attending a number of youth music
               workshops when i was a teenager, and went on to study Studio &amp;
-              Live Sound Production in a Level 6 QQI course when i was 18
+              Live Sound Production in a Level 5 QQI course when i was 18
             </p>
             <p>
               i worked part-time as a sound engineer for a while and really
@@ -133,6 +133,7 @@ export default function AboutPage() {
               <li>python</li>
               <li>typescript</li>
               <li>angular</li>
+              <li>expo</li>
               <li>react &amp; react native</li>
               <li>ionic</li>
               <li>blender</li>
