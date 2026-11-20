@@ -59,13 +59,13 @@ export default function Nav() {
     <div className="flex flex-col justify-between min-w-80 bg-gunmetal md:h-screen">
       <div className="cursor-default font-jersey p-3 text-4xl text-center">
         <div className="mb-0.5">
-          <a
+          <Link
             className="text-coral cursor-pointer"
-            href="/home"
+            href="/"
             title="return to home"
           >
             iarla sparrow burke
-          </a>
+          </Link>
         </div>
         <div className="bg-paynesgray h-0.5 w-full rounded-2xl"></div>
         <div className="text-silver font-poppins text-sm mt-0.5">

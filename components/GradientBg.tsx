@@ -1,5 +1,3 @@
-import * as motion from "motion/react-client";
-
 interface GradientBgProps {
   bgcolor: string;
   bgblendmode?: string;
@@ -13,17 +11,12 @@ export default function GradientBg({
 }: GradientBgProps) {
   return (
     <>
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        className={`absolute inset-0 ${bgcolor} bg-blend-${bgblendmode} mix-blend-${mixblendmode}`}
-      ></motion.div>
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        className="absolute inset-0 bg-black/50"
-      ></motion.div>
+      <div
+        className={`absolute inset-0 ${bgcolor} bg-blend-${bgblendmode} mix-blend-${mixblendmode} animate-fade-in`}
+      />
+      <div
+        className="absolute inset-0 bg-black/50 animate-fade-in"
+      />
     </>
   );
 }
-

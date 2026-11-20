@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import WorkBg from "@/public/work.jpg";
+import Image from "next/image";
+import WorkBg from "@/public/work.webp";
 import WorkGrid from "@/components/WorkGrid";
-import * as motion from "motion/react-client";
 import { ArrowLongDownIcon as ArrowDown } from "@heroicons/react/24/solid";
 
 export const metadata: Metadata = {
@@ -13,16 +13,18 @@ export const metadata: Metadata = {
 export default function WorkPage() {
 	return (
 		<div className="w-full">
-			<div
-				className="flex flex-col justify-start items-start p-4 bg-cover bg-center w-full h-[calc(100vh-12.5rem)] md:h-screen relative"
-				style={{ backgroundImage: `url(${WorkBg.src})` }}
-			>
+			<div className="relative overflow-hidden flex flex-col justify-start items-start p-4 w-full h-[calc(100vh-12.5rem)] md:h-screen">
+				<Image
+					src={WorkBg}
+					alt="background"
+					fill
+					priority
+					quality={80}
+					sizes="100vw"
+					className="object-cover -z-10 pointer-events-none"
+				/>
 				<div className="w-full md:w-[500px] min-h-56 text-left text-lg relative">
-					<motion.div
-						initial={{ opacity: 0 }}
-						animate={{ opacity: 1 }}
-						className="absolute inset-0 bg-[#42acac] bg-blend-color-burn mix-blend-color-burn"
-					></motion.div>
+					<div className="absolute inset-0 bg-[#42acac] bg-blend-color-burn mix-blend-color-burn animate-fade-in" />
 					<div className="flex flex-col gap-1 border-2 text-white border-white border-dashed justify-between relative z-10 p-4 h-full">
 						<p className="">
 							welcome to the portfolio proper! great to have you.

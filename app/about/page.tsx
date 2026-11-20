@@ -1,4 +1,5 @@
-import AboutBg from "@/public/about.jpg";
+import Image from "next/image";
+import AboutBg from "@/public/about.webp";
 import type { Metadata } from "next";
 import GradientTile from "@/components/GradientTile";
 
@@ -9,10 +10,16 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <div
-      className="min-h-screen overflow-y-scroll bg-fixed flex flex-col justify-center bg-cover bg-center  p-4 gap-4"
-      style={{ backgroundImage: `url(${AboutBg.src})` }}
-    >
+    <div className="relative min-h-screen overflow-y-scroll flex flex-col justify-center p-4 gap-4">
+      <Image
+        src={AboutBg}
+        alt="background"
+        fill
+        priority
+        quality={80}
+        sizes="100vw"
+        className="object-cover -z-10 pointer-events-none"
+      />
       <div className="grid grid-cols-1 xl:grid-cols-2 gap-4 w-full md:w-3/4 mx-auto">
         <GradientTile
           className="text-left text-md relative"

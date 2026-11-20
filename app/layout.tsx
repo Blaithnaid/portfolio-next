@@ -7,12 +7,14 @@ const jersey = Jersey_15({
 	variable: "--font-jersey",
 	subsets: ["latin"],
 	weight: "400", // add additional weights as needed
+	display: "swap",
 });
 
 const poppins = Poppins({
 	variable: "--font-poppins",
 	subsets: ["latin"],
-	weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+	weight: ["300", "400", "700"],
+	display: "swap",
 });
 
 export const metadata: Metadata = {

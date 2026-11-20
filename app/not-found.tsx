@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
-import NotFoundBg from "@/public/404.jpg";
+import NotFoundBg from "@/public/404.webp";
 import GradientTile from "@/components/GradientTile";
 
 export const metadata: Metadata = {
@@ -12,10 +13,16 @@ export const metadata: Metadata = {
 export default function NotFound() {
   return (
     <div className="w-full">
-      <div
-        className="flex flex-col justify-center items-center p-4 bg-cover bg-center w-full h-[calc(100vh-12.5rem)] md:h-screen relative"
-        style={{ backgroundImage: `url(${NotFoundBg.src})` }}
-      >
+      <div className="relative overflow-hidden flex flex-col justify-center items-center p-4 w-full h-[calc(100vh-12.5rem)] md:h-screen">
+        <Image
+          src={NotFoundBg}
+          alt="404 background"
+          fill
+          priority
+          quality={80}
+          sizes="100vw"
+          className="object-cover -z-10 pointer-events-none"
+        />
         <GradientTile
           bgcolor="bg-blue-400"
           className="w-full md:w-[700px] min-h-56 text-left text-lg relative"

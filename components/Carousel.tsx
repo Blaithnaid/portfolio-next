@@ -33,7 +33,7 @@ export default function Carousel({ items, initialIndex = 0 }: CarouselProps) {
               alt={currentItem.alt || ""}
               fill
               style={{ objectFit: "cover" }}
-              sizes="100vw"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
               onClick={() => setLightboxOpen(true)}
               className="hover:cursor-pointer"
             />
