@@ -16,7 +16,6 @@ export default function AboutPage() {
         alt="background"
         fill
         priority
-        quality={80}
         sizes="100vw"
         className="object-cover -z-10 pointer-events-none"
       />

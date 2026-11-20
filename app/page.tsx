@@ -1,16 +1,17 @@
 import Image from "next/image";
 import CVSpan from "@/components/CV";
 import HomeBg from "@/public/home.webp";
+import ImagePreloader from "@/components/ImagePreloader";
 
 export default function HomePage() {
   return (
     <div className="relative flex flex-col justify-end items-end p-4 w-full h-[calc(100vh-12.5rem)] md:h-screen overflow-hidden">
+      <ImagePreloader />
       <Image
         src={HomeBg}
         alt="background"
         fill
         priority
-        quality={80}
         sizes="100vw"
         className="object-cover -z-10 pointer-events-none"
       />

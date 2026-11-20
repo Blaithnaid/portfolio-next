@@ -19,7 +19,6 @@ export default function NotFound() {
           alt="404 background"
           fill
           priority
-          quality={80}
           sizes="100vw"
           className="object-cover -z-10 pointer-events-none"
         />
