@@ -20,6 +20,13 @@ const poppins = Poppins({
 export const metadata: Metadata = {
 	title: "home ~ isb",
 	description: "my personal portfolio in Next.js",
+	icons: {
+		icon: [
+			{ url: "/favicon.ico", sizes: "any" },
+			{ url: "/icon.svg", type: "image/svg+xml" },
+		],
+		apple: "/apple-icon.png",
+	},
 };
 
 export default function RootLayout({
